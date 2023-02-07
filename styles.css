@@ -178,126 +178,6 @@ body {
         color: black;
     } 
     
-    #humanButton {
-        border-radius: 1.5rem;
-        font-size: 0.75rem;
-        padding: 1rem;
-        margin-right: 0.5rem;
-        transition: -webkit-transform 0.2s;
-        transition: transform 0.2s;
-        cursor: pointer;
-        background-color: white;
-        box-shadow: 0 0.2rem white;
-    } 
-    
-    #humanButton:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-    
-    #humanButton:active {
-        transform: translateY(4px);
-        box-shadow:0 0.2rem 0 0 black;
-        border: 2px solid red;
-    }
-    
-    #humanButton:focus{
-        border: 3px solid red;
-        box-shadow: none;
-    }
-    
-    #computerButton {
-        border-radius: 1.5rem;
-        padding: 1rem;
-        margin-right: 0.5rem;
-        font-size: 0.75rem;
-        transition: -webkit-transform 0.2s;
-        transition: transform 0.2s;
-        cursor: pointer;
-        background-color: white;
-        box-shadow: 0 0.2rem white;
-        margin-top: 0.4rem;
-    }
-    
-    #computerButton:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-    
-    #computerButton:active {
-        transform: translateY(4px);
-        box-shadow:0 0.2rem 0 0 black;
-        border: 2px solid red;
-    }
-    
-    #computerButton:focus{
-        border: 3px solid red;
-        box-shadow: none;
-    }
-    
-    .computerLevel {
-        position: fixed;
-        margin-top: 35rem;
-        margin-left: 12.5rem;
-    }
-    
-    #easyButton {
-        border-radius: 1.5rem;
-        font-size: 0.75rem;
-        padding: 1rem;
-        margin-right: 0.5rem;
-        margin-top: 1.25rem;
-        transition: -webkit-transform 0.2s;
-        transition: transform 0.2s;
-        cursor: pointer;
-        background-color: white;
-        box-shadow: 0 0.2rem white;
-    } 
-    
-    #easyButton:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-    
-    #easyButton:active {
-        transform: translateY(4px);
-        box-shadow:0 0.2rem 0 0 black;
-        border: 2px solid red;
-    }
-    
-    #easyButton:focus{
-        border: 3px solid red;
-        box-shadow: none;
-    }
-
-    #hardButton {
-        border-radius: 1.5rem;
-        font-size: 0.75rem;
-        padding: 1rem;
-        margin-right: 0.5rem;
-        transition: -webkit-transform 0.2s;
-        transition: transform 0.2s;
-        cursor: pointer;
-        background-color: white;
-        box-shadow: 0 0.2rem white;
-    } 
-    
-    #hardButton:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-    
-    #hardButton:active {
-        transform: translateY(4px);
-        box-shadow:0 0.2rem 0 0 black;
-        border: 2px solid red;
-    }
-    
-    #hardButton:focus{
-        border: 3px solid red;
-        box-shadow: none;
-    }
-    
     #startButton {
         position: fixed;
         margin-top: 70rem;
@@ -418,7 +298,6 @@ body {
     cursor: pointer;
     background-color: white;
     box-shadow: 0 0.2rem white;
-
 }
 
 #returnButton:hover {
