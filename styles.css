@@ -1,0 +1,620 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+#modalForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    height: 100vh;
+}
+
+.startTitleContainer,
+.startTitle,
+.versusContainer,
+.versus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: fixed;
+    animation: transitionIn 3s;
+}
+
+.startTitleContainer{
+    margin-bottom: 40rem;
+}
+
+.startTitle{
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.versus {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.gif img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 1.5rem;
+    animation: transitionIn 3s;
+}
+
+.player1_option_container {
+    margin-right: 8rem;
+    margin-top: 5rem;
+    animation: transitionIn 3s;
+}
+
+.player2_option_container {
+    margin-left: 8rem;
+    margin-top: 5rem;
+    animation: transitionIn 3s;
+}
+
+.you {
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    animation: transitionIn 3s;
+} 
+
+#startButton {
+    display: block;
+    position: fixed;
+    margin-top: 70rem;
+    width: 20rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0.2rem white;
+    animation: transitionIn 3s;
+}
+
+#startButton:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+#startButton:active {
+    transform: translateY(4px);
+    box-shadow:0 0.2rem 0 0 black;
+    border: 0.2rem solid red;
+}
+
+#startButton:focus{
+    border: 0.3rem solid red;
+    box-shadow: none;
+}
+
+@media (max-width: 1024px) {
+    .startTitleContainer,
+    .startTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        position: fixed;
+    }
+
+    .startTitleContainer {
+        margin-bottom: 20rem;
+    }
+
+    .startTitle {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .versus {
+        font-size: 0.75rem;
+    }
+    
+    #modalForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        background-color: black;
+        height: 100vh;
+    }
+    
+    .gif img {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 11rem;
+        height: 11.5rem;
+    }
+    
+    .player1_option_container {
+        margin-right: 0.75rem;
+    }
+    
+    .player2_option_container {
+        margin-left: 0.75rem;
+    }
+    
+    .you {
+        border-radius: 1.5rem;
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        background-color: white;
+        color: black;
+    } 
+    
+    #humanButton {
+        border-radius: 1.5rem;
+        font-size: 0.75rem;
+        padding: 1rem;
+        margin-right: 0.5rem;
+        transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+        cursor: pointer;
+        background-color: white;
+        box-shadow: 0 0.2rem white;
+    } 
+    
+    #humanButton:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    #humanButton:active {
+        transform: translateY(4px);
+        box-shadow:0 0.2rem 0 0 black;
+        border: 2px solid red;
+    }
+    
+    #humanButton:focus{
+        border: 3px solid red;
+        box-shadow: none;
+    }
+    
+    #computerButton {
+        border-radius: 1.5rem;
+        padding: 1rem;
+        margin-right: 0.5rem;
+        font-size: 0.75rem;
+        transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+        cursor: pointer;
+        background-color: white;
+        box-shadow: 0 0.2rem white;
+        margin-top: 0.4rem;
+    }
+    
+    #computerButton:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    #computerButton:active {
+        transform: translateY(4px);
+        box-shadow:0 0.2rem 0 0 black;
+        border: 2px solid red;
+    }
+    
+    #computerButton:focus{
+        border: 3px solid red;
+        box-shadow: none;
+    }
+    
+    .computerLevel {
+        position: fixed;
+        margin-top: 35rem;
+        margin-left: 12.5rem;
+    }
+    
+    #easyButton {
+        border-radius: 1.5rem;
+        font-size: 0.75rem;
+        padding: 1rem;
+        margin-right: 0.5rem;
+        margin-top: 1.25rem;
+        transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+        cursor: pointer;
+        background-color: white;
+        box-shadow: 0 0.2rem white;
+    } 
+    
+    #easyButton:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    #easyButton:active {
+        transform: translateY(4px);
+        box-shadow:0 0.2rem 0 0 black;
+        border: 2px solid red;
+    }
+    
+    #easyButton:focus{
+        border: 3px solid red;
+        box-shadow: none;
+    }
+
+    #hardButton {
+        border-radius: 1.5rem;
+        font-size: 0.75rem;
+        padding: 1rem;
+        margin-right: 0.5rem;
+        transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+        cursor: pointer;
+        background-color: white;
+        box-shadow: 0 0.2rem white;
+    } 
+    
+    #hardButton:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    #hardButton:active {
+        transform: translateY(4px);
+        box-shadow:0 0.2rem 0 0 black;
+        border: 2px solid red;
+    }
+    
+    #hardButton:focus{
+        border: 3px solid red;
+        box-shadow: none;
+    }
+    
+    #startButton {
+        position: fixed;
+        margin-top: 70rem;
+        width: 20rem;
+        border-radius: 1.5rem;
+        font-size: 0.75rem;
+        padding: 1rem;
+        transition: -webkit-transform 0.2s;
+        transition: transform 0.2s;
+        cursor: pointer;
+        background-color: white;
+        box-shadow: 0 0.2rem white;
+        margin-bottom: 5rem;
+    }
+    
+    #startButton:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    
+    #startButton:active {
+        transform: translateY(4px);
+        box-shadow:0 0.2rem 0 0 black;
+        border: 2px solid red;
+    }
+    
+    #startButton:focus{
+        border: 3px solid red;
+        box-shadow: none;
+    }
+    
+}
+
+.titleContainer,
+.displayTurnContainer,
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.titleContainer {
+    margin-top: 7rem;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.displayTurn {
+    font-size: 2rem;
+    font-weight: bold;
+    color:white;
+    text-shadow: 0 0 4rem white;
+    animation: animate 1s ease-in-out infinite; 
+}
+
+@keyframes animate {
+    from {
+        text-shadow: 0 0 0.25rem white;
+    }
+    to {text-shadow: 0 0 4rem white,
+                    0 0 3rem white;
+    }
+}
+
+@media (max-width: 1024px) {
+    .titleContainer,
+    .displayTurnContainer,
+    .buttons {
+        padding: 0.5rem;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .displayTurn {
+        font-size: 1rem;
+    }
+}
+
+.buttons {
+    margin-top: 3.5rem;
+    border-radius: 1.5rem;
+}
+
+#resetButton {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-right: 0.5rem;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0.2rem white;
+}
+
+#resetButton:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+#resetButton:active {
+    transform: translateY(4px);
+    box-shadow:0 0.2rem 0 0 black;
+    border: 0.2rem solid red;
+}
+
+#returnButton {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0.2rem white;
+
+}
+
+#returnButton:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+#returnButton:active {
+    transform: translateY(4px);
+    box-shadow:0 0.2rem 0 0 black;
+    border: 0.2rem solid red;
+}
+
+#returnButton:focus{
+    border: 0.3rem solid red;
+    box-shadow: none;
+}
+
+.gameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45vh;
+}
+
+.playArea {
+    display: grid;
+    width: 30rem;
+    height: 30rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .playArea {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        height: 15rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .square {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.square:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+#square1 {
+    border-right: 0.2rem solid white;
+    border-bottom: 0.2rem solid white;
+}
+
+#square2 {
+    border-bottom: 0.2rem solid white;
+}
+
+#square3 {
+    border-left: 0.2rem solid white;
+    border-bottom: 0.2rem solid white;
+}
+
+#square4 {
+    border-right: 0.2rem solid white;
+}
+
+#square6 {
+    border-left: 0.2rem solid white;
+}
+
+#square7 {
+    border-right: 0.2rem solid white;
+    border-top: 0.2rem solid white;
+}
+
+#square8 {
+    border-top: 0.2rem solid white;
+}
+
+#square9 {
+    border-left: 0.2rem solid white;
+    border-top: 0.2rem solid white;
+}
+
+.square.x::before,
+.square.x::after {
+    content: "";
+    position: absolute;
+    width: 0.25rem;
+    height: 4rem;
+    background-color: white;
+}
+
+.square.x::before {
+    transform: rotate(45deg);
+}
+
+.square.x::after {
+    transform: rotate(-45deg);
+}
+
+.square.o::before,
+.square.o::after {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.square.o::before {
+    background-color: white;
+}
+
+.square.o::after {
+    background-color: black;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.square.x,
+.square.o {
+    cursor: not-allowed;
+}
+
+.gameover-container {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: rgba(0,0,0, .95);
+    top: 25%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.25rem;
+    max-width: 50rem;
+    width: 100%;
+    height: 40rem;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+
+.gameover-text {
+    font-size: 5rem;
+    margin-bottom: 7rem;
+}
+
+.endgame-result {
+    font-size: 4rem;
+    margin-bottom: 7rem;
+}
+
+.okButton {
+    background-color: rgb(46,44,44);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    margin-bottom: 7rem;
+    font-size: 1.5rem;
+}
+
+.okButton:hover, .okButton:focus, .okButton:active {
+    transform: scale(1.2);
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(0deg)
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
