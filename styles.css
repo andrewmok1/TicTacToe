@@ -96,6 +96,7 @@ body {
     transition: transform 0.2s;
     cursor: pointer;
     background-color: white;
+    color: black;
     box-shadow: 0 0.2rem white;
     animation: transitionIn 3s;
 }
@@ -190,6 +191,7 @@ body {
         cursor: pointer;
         background-color: white;
         box-shadow: 0 0.2rem white;
+        color: black;
         margin-bottom: 5rem;
     }
     
@@ -275,6 +277,7 @@ body {
     transition: transform 0.2s;
     cursor: pointer;
     background-color: white;
+    color: black;
     box-shadow: 0 0.2rem white;
 }
 
@@ -297,6 +300,7 @@ body {
     transition: transform 0.2s;
     cursor: pointer;
     background-color: white;
+    color: black;
     box-shadow: 0 0.2rem white;
 }
 
